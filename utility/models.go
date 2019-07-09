@@ -21,4 +21,7 @@ func GenerateUUID() string {
 	return string(sd)
 
 }
-
+//Env ........
+type Env struct{
+	DB datastore.Datastore
+}

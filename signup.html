@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign Up</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway&display=swap" rel="stylesheet">
+<style>
+  *{
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #344a72;
+  }
+  #div1{
+    max-width:20em;
+    margin:auto;
+  }
+  #container1{
+      background-color: white;
+      padding:20px 35px;
+      border:none;
+      margin-top: 40px;
+      border-radius: 10px;
+  }
+  h1{
+    margin:10px 0;
+    text-align:center;
+  }
+  #container1 p{
+    text-align:center;
+    margin-top:8px;
+    margin-bottom: 24px;
+  }
+  #container2 p{
+    color:white;
+    text-align:center;
+  }
+  #container2 a{
+    color:#26A69A;
+    text-decoration:none;
+  }
+  .input_field{
+    margin-top:3px;
+    border:1px solid #BDBDBD;
+    border-radius:4px;
+    padding-top:4px;
+    width:100%;
+    padding-bottom:4px;
+    margin-bottom:10px;
+  }
+  #sign{
+    background-color: #26A69A;
+    width:100%;
+    border:none;
+    color:white;
+    display:block;
+    border-radius: 5px;
+    margin:10px 0px 30px;
+    padding:10px 0px;
+  }
+  #sign:hover{
+    background-color: #37a80e;
+  }
+  .TCP{
+    font-size:14px;
+  }
+  .TCP a{
+    text-decoration: none;
+    color:royalblue;
+  }
+  .info label{
+    display:block;
+    color:black;
+  }
+</style>
+</head>
+<body>
+  <div id="div1">
+    <div id="container1">
+      <h1>Sign Up</h1>
+      <p>It's free and takes only a minute</p>
+      <form action="./action.php"class="info">
+        <label for="first_name">First Name</label>
+        <input type="text" name="First Name" id="first_name" class="input_field" required>
+        <label for="last_name">Last Name</label>
+        <input type="text" class="input_field" name="Last Name" id="last_name" required >
+        <label for="email">Email</label>
+        <input type="email" class="input_field" name="Email-id" id="email" required>
+        <label for="pass">Password</label>
+        <input type="password" class="input_field" name="Password" id="pass" required>
+        <label for="pass_2">Confirm Password</label>
+        <input type="password" class="input_field" name="PassWord2" id="pass_2" required>
+        <button type="submit" id="sign" >Sign Up</button>
+        <p class="TCP">By clicking the Sign Up button,you agree to our<br><a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a> </p>
+    </form>
+  </div>
+  <div id="container2">
+    <p>Already Have an account?<a href="#">Login Here</a></p>
+  </div>
+ </div> 
+</body>
+</html>
