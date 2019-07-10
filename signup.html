@@ -82,20 +82,37 @@
     <div id="container1">
       <h1>Sign Up</h1>
       <p>It's free and takes only a minute</p>
-      <form action="./action.php"class="info">
-        <label for="first_name">First Name</label>
-        <input type="text" name="First Name" id="first_name" class="input_field" required>
-        <label for="last_name">Last Name</label>
-        <input type="text" class="input_field" name="Last Name" id="last_name" required >
-        <label for="email">Email</label>
-        <input type="email" class="input_field" name="Email-id" id="email" required>
-        <label for="pass">Password</label>
-        <input type="password" class="input_field" name="Password" id="pass" required>
-        <label for="pass_2">Confirm Password</label>
-        <input type="password" class="input_field" name="PassWord2" id="pass_2" required>
+      <form action="./signup"class="info">
+        <fieldset>
+          <div class="pure-control-group">
+              <label for="Firstname">First Name</label>
+              <input type="text" name="First Name" id="Firstname" class="pure-control-group" value="{{.fields.Firstname}}">
+              <span> id="Firstname" class="pure-form-message-inline">{{.errors.Firstname}}</span>
+          </div>
+          <div class="pure-control-group">
+              <label for="Lastname">Last Name</label>
+              <input type="text" name="Last Name" id="Lastname" class="pure-control-group" value="{{.fields.Lastname}}">
+              <span> id="Lastname" class="pure-form-message-inline">{{.errors.Lastname}}</span>
+          </div>
+          <div class="pure-control-group">
+              <label for="Email">E-mail</label>
+              <input type="text" name="Email" id="Email" class="pure-control-group" value="{{.fields.Email}}">
+              <span> id="Email" class="pure-form-message-inline">{{.errors.Email}}</span>
+          </div>
+          <div class="pure-control-group">
+              <label for="Password">Password</label>
+              <input type="text" name="Password" id="Password" class="pure-control-group" value="{{.fields.Password}}">
+              <span> id="Password" class="pure-form-message-inline">{{.errors.Password}}</span>
+          </div>
+          <div class="pure-control-group">
+              <label for="Confirm Password">Confirm Password</label>
+              <input type="text" name="Confirm Password" id="Confirm Password" class="pure-control-group" value="{{.fields.Confirm Password}}">
+              <span> id="Confirm Password" class="pure-form-message-inline">{{.errors.Confirm Password}}</span>
+          </div>
         <button type="submit" id="sign" >Sign Up</button>
         <p class="TCP">By clicking the Sign Up button,you agree to our<br><a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a> </p>
-    </form>
+      </fieldset>
+      </form>
   </div>
   <div id="container2">
     <p>Already Have an account?<a href="#">Login Here</a></p>
@@ -103,3 +120,4 @@
  </div> 
 </body>
 </html>
+
