@@ -4,7 +4,7 @@ import "github/SignUpPage/utility"
 
 //Datastore is an interface for database functionality
 type Datastore interface {
-	Createuser(u *utility.User) error
+	CreateUser(u *utility.User) error
 	Getuser(username string) (*utility.User, error)
 	close()
 }

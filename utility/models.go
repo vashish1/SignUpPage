@@ -7,6 +7,11 @@ import (
 	"github.com/google/uuid"
 )
 
+//Env ........
+type Env struct{
+	DB datastore.Datastore
+}
+
 //SHA256ofstring is a function which takes a string a reurns its sha256 hashed form
 func SHA256ofstring(p string) string {
 	h := sha1.New()
@@ -20,8 +25,4 @@ func GenerateUUID() string {
 	sd := uuid.New()
 	return string(sd)
 
-}
-//Env ........
-type Env struct{
-	DB datastore.Datastore
 }

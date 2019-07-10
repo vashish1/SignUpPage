@@ -22,8 +22,8 @@ func NewmongoDB(url string) (*MongoDBdatastore, error) {
 	}, nil
 
 }
-//Createuser creates a user in database
-func (m *MongoDBdatastore) Createuser(user *utility.User) error {
+//CreateUser creates a user in database
+func (m *MongoDBdatastore) CreateUser(user *utility.User) error {
     session:m.Copy()
 	defer session.close()
 	usercollection := session.DB("SignUpPage").C(user)
@@ -40,7 +40,7 @@ func (m *MongoDBdatastore)Getuser(email string) (*utility.User,error){
 	defer session.close()
 	usercollection := session.DB("SignUpPage").C(user)
 	u:=utility.User{}
-	err:=usercollection.find(bson.M{"Email":email}).One(&U)
+	err:=usercollection.find(bson.M{"Email":email}).One(&u)
 	if err!=nil{
 		return nil,err
 	}
