@@ -6,6 +6,12 @@ ADD . /app
 
 WORKDIR /app
 
-RUN go build -o main .
+ENV GO111MODULE=on
 
-CMD ["/app/main"]
+RUN go mod download
+
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o SignUpPage
+
+EXPOSE 80
+
+CMD ["./SignUpPage"]

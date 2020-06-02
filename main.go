@@ -24,7 +24,7 @@ func main() {
 	r.HandleFunc("/signup", signuphandler)
 	r.HandleFunc("/confirmation",confirm)
 	http.Handle("/",r)
-	log.Fatal(http.ListenAndServe(":9098", r))
+	log.Fatal(http.ListenAndServe(":80", r))
 }
 
 func signuphandler(w http.ResponseWriter, r *http.Request) {
