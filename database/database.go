@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
+
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -13,7 +15,9 @@ import (
 //Createdb creates a database
 func Createdb() (*mongo.Collection, *mongo.Client) {
 
-	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
+	url:=os.Getenv("MongoUrl")
+
+	clientOptions := options.Client().ApplyURI(url)
 
 	// Connect to MongoDB
 	client, err := mongo.Connect(context.TODO(), clientOptions)

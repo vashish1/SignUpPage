@@ -2,7 +2,6 @@ package main
 
 import (
 	"SignUpPage/database"
-	// "SignUpPage/models"
 	"fmt"
 	"log"
 	"net/http"
@@ -10,7 +9,6 @@ import (
 
 	"github.com/gorilla/mux"
 	"go.mongodb.org/mongo-driver/mongo"
-	// "github.com/micro/go-micro/debug/log"
 )
 
 var cl *mongo.Collection
